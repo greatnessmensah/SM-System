@@ -3,10 +3,10 @@ const router = express.Router();
 
 const studentsController = require("../controllers/studentsController");
 
-// create new student
-router.post("/add", studentsController.createStudent);
 
-// get single student
-router.get("/get/:studentId", studentsController.getSingleStudent);
+router.post("/student/create", studentsController.createStudent);
+
+router.get("/student/:studentId", studentsController.getSingleStudent);
 
 
+module.exports = router;

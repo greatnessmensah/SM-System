@@ -1,17 +1,16 @@
 const express = require("express")
 const mongoose = require("mongoose")
 
-//import routes
 
+const studentsRouter = require("./routes/studentsRoutes");
 
-//init app
 const app = express();
 app.use(express.json());
 require("dotenv").config();
 
 app.get('/', (req, res) => {
     res.send('Hello Welcome to the School Management System API')
-  })
+})
 
 app.use((req, res, next) => {
     console.log(`${new Date().toString()} => ${req.originalUrl}`)
@@ -23,17 +22,16 @@ app.use((req, res, next) => {
 
 const db = require("./config/keys").mongoURI;
 mongoose.connect(db, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
 });
 
 const connection = mongoose.connection;
-connection.once("open",() =>{
+connection.once("open", () => {
     console.log("mongodb connection success!");
 })
 
-// routes
-
+app.use(studentsRouter);
 
 const port = process.env.PORT || 8000;
 

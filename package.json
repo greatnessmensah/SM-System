@@ -4,6 +4,8 @@
   "description": "School Management System built by Subah Info Solutions",
   "main": "server.js",
   "scripts": {
+    "start": "node ./server.js",
+    "start-watch": "nodemon ./server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

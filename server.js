@@ -9,6 +9,14 @@ const app = express();
 app.use(express.json());
 require("dotenv").config();
 
+app.use((req, res, next) => {
+    console.log(`${new Date().toString()} => ${req.originalUrl}`)
+    next()
+})
+app.use((req, res, next) => {
+    res.status(400).send("We think you are lost")
+})
+
 const db = require("./config/keys").mongoURI;
 mongoose.connect(db, {
   useNewUrlParser: true,

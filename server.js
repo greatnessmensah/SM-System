@@ -9,6 +9,10 @@ const app = express();
 app.use(express.json());
 require("dotenv").config();
 
+app.get('/', (req, res) => {
+    res.send('Hello Welcome to the School Management System API')
+  })
+
 app.use((req, res, next) => {
     console.log(`${new Date().toString()} => ${req.originalUrl}`)
     next()

@@ -1,0 +1,27 @@
+{
+  "name": "student-management-system",
+  "version": "1.0.0",
+  "description": "School Management System built by Subah Info Solutions",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/greatnessmensah/SM-System.git"
+  },
+  "author": "Ephraim Mensah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/greatnessmensah/SM-System/issues"
+  },
+  "homepage": "https://github.com/greatnessmensah/SM-System#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.9.1"
+  }
+}

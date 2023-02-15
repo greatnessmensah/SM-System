@@ -16,9 +16,6 @@ app.use((req, res, next) => {
     console.log(`${new Date().toString()} => ${req.originalUrl}`)
     next()
 })
-app.use((req, res, next) => {
-    res.status(400).send("We think you are lost")
-})
 
 const db = require("./config/keys").mongoURI;
 mongoose.connect(db, {
@@ -32,6 +29,10 @@ connection.once("open", () => {
 })
 
 app.use(studentsRouter);
+
+app.use((req, res, next) => {
+    res.status(400).send("We think you are lost")
+})
 
 const port = process.env.PORT || 8000;
 

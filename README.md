@@ -6,7 +6,7 @@ This is a REST API that allows you to create and read sudents.
 
 # Live Environment
 
-- The Deployed Version of the API can be found at [Vercel](https://sm-system.vercel.app/)
+- The Deployed Version of the API can be found at [Vercel](https://vercel.com/greatnessmensah/sm-system/DwU3nSzbh9CQMDviiFoVwAaCi88F)
 
 - The API documentation for the deployment can be found at [Postman](https://documenter.getpostman.com/view/23815554/2s93CEwbpd)
 
